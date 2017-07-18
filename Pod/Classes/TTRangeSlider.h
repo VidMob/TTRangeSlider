@@ -131,6 +131,11 @@ IB_DESIGNABLE
 @property (nonatomic, strong) UIColor *handleBorderColor;
 
 /**
+ *Handle slider with custom shadow color, you can set custom shadow color for your handle
+ */
+@property (nonatomic, strong) UIColor *handleShadowColor;
+
+/**
  *Handle border width (default 0.0)
  */
 @property (nonatomic, assign) CGFloat handleBorderWidth;

@@ -629,6 +629,27 @@ static const CGFloat kLabelsFontSize = 12.0f;
     self.rightHandle.borderColor = [handleBorderColor CGColor];
 }
 
+-(void)setHandleShadowColor:(UIColor *)handleShadowColor{
+    _handleShadowColor = handleShadowColor;
+
+    if (handleShadowColor != nil) {
+        self.leftHandle.shadowColor = [handleShadowColor CGColor];
+        self.rightHandle.shadowColor = [handleShadowColor CGColor];
+
+        self.leftHandle.shadowRadius = 1;
+        self.rightHandle.shadowRadius = 1;
+
+        self.leftHandle.shadowOffset = CGSizeMake(0, 3);
+        self.rightHandle.shadowOffset = CGSizeMake(0, 3);
+
+        self.leftHandle.shadowOpacity = 1;
+        self.rightHandle.shadowOpacity = 1;
+    } else {
+        self.leftHandle.shadowOpacity = 0;
+        self.rightHandle.shadowOpacity = 0;
+    }
+}
+
 -(void)setHandleBorderWidth:(CGFloat)handleBorderWidth{
     _handleBorderWidth = handleBorderWidth;
     self.leftHandle.borderWidth = handleBorderWidth;
