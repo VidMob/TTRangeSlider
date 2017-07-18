@@ -605,7 +605,7 @@ static const CGFloat kLabelsFontSize = 12.0f;
 -(void)setHandleImage:(UIImage *)handleImage{
     _handleImage = handleImage;
     
-    CGRect startFrame = CGRectMake(0.0, 0.0, 31, 32);
+    CGRect startFrame = CGRectMake(0, 0, handleImage.size.width, handleImage.size.height);
     self.leftHandle.contents = (id)handleImage.CGImage;
     self.leftHandle.frame = startFrame;
     
